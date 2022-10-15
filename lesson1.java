@@ -81,3 +81,150 @@ System.out.println(7/2.0);
     int number2 = 2;
     System.out.println((double)number1 / number2);
     
+真偽値
+真偽値にはtrueとfalseという２つの値しか存在しない
+trueは正しいfalseは偽
+真偽値のデータ型はboolean型
+
+比較演算子
+==
+!=
+x == y xとyが等しいときはtrueが表示され、等しくないときはfalseが表示される
+x != y xとyが等しくないときはtrueが表示され、等しいときはfalseが表示される
+
+大小比較
+
+x < y xよりyが大きければtrue 小さいもしくは等しい場合はfalse 
+x <= y xよりyが大きいまたは等しければtrue 小さければfalse
+> 逆も一緒
+
+System.out.println(4 + 6 <= 10)
+等しいのでtrueになる
+
+論理演算子
+かつ　または　ではない　を表現する
+かつ&&について
+trueにさせる
+number = 10
+System.out.println(number > 3 && number < 11);
+条件が１かつ２もtrueであったらtrueになる
+なので10は3より大きくてかつ１１より小さいそのためtrueなる
+
+または ||について
+System.out.println(number > 3 || number < 5)
+10は3より大きいまたは10は５より小さい
+どちらかが当てはまっておけばtrue
+
+ではない!()について
+x >= 30 xは10、30より小さいそのため結果はfalse
+!(x >= 30) !()ではないなので結果はtrue
+
+System.out.println(!(8 < 5));
+書くときは（）の中に!（）になるので注意する
+
+条件分岐
+if(条件式){
+  処理;
+}
+if文を用いて変数xは2より大きいときxは２より大きいと表示させる
+int x = 5
+  if(x > 2){
+    System.out.println(x + "は2より大きい");
+  }
+
+else　else ifについて
+もし〜ならばAでなければB
+
+numberが20より小さいとき、どちらでもないときの条件分岐
+int number = 12;
+ if(number < 10){
+   System.out.println(number + "は10より小さい")；
+ }else if(number < 20){
+   System.out.println(number + "10より大きくは10より小さい")；
+ }else{
+   System.out.println(number + "は20以上")；
+ }
+   
+   
+switch文について
+switch文は条件値と値が一致するときに処理が実行される。break;を忘れない。
+switch文でどのcaseにも当てはまらないときは、defaultを指定する。これはelseと同じ考え
+
+switch(条件式){
+  case 値１:
+    処理;
+    break;
+  case 値２:
+    処理;
+    break;
+  case 値３:
+    処理;
+    break;
+  default:
+    処理;
+    break;
+}
+
+while文について
+繰り返し処理とは一定の処理を繰り返し行う処理のこと
+int number = 1;①変数の初期化
+  while(number <= 5){②条件
+    System.out.println("number");③繰り返す処理
+    number ++;④変数の更新
+  }
+
+for文について
+for文も繰り返し処理の一つ
+  for(int number = 1; number < 5; number++){
+    System.out.println("number");
+  }
+
+breakについて
+if文などの条件分岐を使って強制終了させることもできる
+for(int number = 1; number < 10; number++){
+  if(number > 5){
+    break;
+  } 
+    System.out.println("number");
+  }
+これは↑もし５以上になったらどこで終了
+
+continueについて
+コンティニューとは継続という意味、、、そのためもしまるまるに当てはまってもその周の処理だけスキップして継続して処理を行う。
+for(int number = 1; number < 10; number++){
+  if(number == 5){
+    continue;
+  } 
+    System.out.println("number");
+  }
+
+配列とは
+変数のセットのようなもの。
+配列の変数定義
+int[]、、、数値を要素に持つ配列
+String[]、、、文字列を要素に持つ配列
+配列の作り方
+int[] number = {1,2,3,4,5}
+インデックス番号と要素の取得
+配列名[インデックス番号]とすることで取得することができる
+// 変数namesに、配列を代入
+int[] names = {"jon","call","tom"};
+
+    // インデックス番号が0の要素を出力
+  System.out.println(names[0]);
+
+    // インデックス番号が2の要素
+  System.out.println(names[2]); 
+
+配列の要素の上書き
+上書きするときは
+配列名[上書きしたい元インデックス番号] = "上書き要素";
+
+配列とfor文
+ String[] names = {"あみ", "かおる", "こはる"};
+    
+    // 配列用のfor文を用いて、「私の名前は◯◯です」と出力
+    for(String name:names){
+      System.out.println("私の名前は" + name + "です");
+    }
+    
