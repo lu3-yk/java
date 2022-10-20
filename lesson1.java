@@ -245,6 +245,67 @@ public static voidの部分は定型として覚える
 同名メソッドは基本的に定義できない
 
 1〜10までの数字のうち偶数のみを昇順で表示させる
+
+public class Q_0104 {
+	public static void main(String[] args) {
+		for(int number = 10; 0 <= number; number--) {
+			if(number % 2 == 0) {
+				System.out.println(number);
+			}
+		}
+	}
+}
 1〜10までに偶数が何個あるか、また偶数の合計は幾つになるか表示させる
+
+public class Q_0104 {
+	public static void main(String[] args) {
+		int count = 0;
+		for(int i = 0; i <=10; i++) {
+			if(i % 2 == 0) {
+				count++;
+			}
+		}
+		System.out.println(count);
+		
+	}
+}
+
+public class Q_0104 {
+	public static void main(String[] args) {
+		int sumEven = 0;
+		for(int i = 0;i <= 10; i++) {
+			if(i % 2 == 0) {
+				sumEven += i;
+			}
+		}
+		System.out.println(sumEven);
+	}
+}
+
 1〜10までの整数をカンマ区切りで横並びで表示させる
 (10にはカンマをつけない)
+
+public class Q_0104 {
+	public static void main(String[] args) {
+		for(int i = 0;i <= 10; i++) {
+			if(i <= 9) {
+				System.out.print(i + ",");
+			}else {
+				System.out.print(i);
+			}
+		}
+	}
+}
+
+配列の中に５ずつ加算していく
+public class Q_0104 {
+	public static void main(String[] args) {
+		int [] number;
+		number = new int[20];
+		for(int i = 0; i < 20; i++) {
+			number[i] = i * 5;
+			System.out.println(number[i]);
+		}
+	}
+}
+
